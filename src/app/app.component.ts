@@ -16,9 +16,9 @@ export class AppComponent {
 
 
   constructor() {
-    this.temp = '\n \n \n Look description !\n \n Look measurements on last photo !\n \n Bargaining possible !\n \n Follow this item !\n \n I immediately answer any offers and questions!\n \n \n Before you throw the product in, make sure you want to buy this product!\n \n Also, before leaving any feedback, or you do not like something, write better to me, I immediately answer all questions, and solve all problems regarding the product.\n \n \n Description :\n \n \n Condition : \n \n';
+    this.temp = '\n \n \n Look description !\n \n  Bargaining possible !\n \n Follow this item !\n \n I immediately answer any offers and questions!\n \n \n Before you throw the product in, make sure you want to buy this product!\n \n Also, before leaving any feedback, or you do not like something, write better to me, I immediately answer all questions, and solve all problems regarding the product.\n \n \n';
     this.inc = 0.39370078740157477;
-    this.meas = '\n \n Measurements :\n \n \n'
+    this.meas = '\n \n Measurements :\n \n'
     this.finalText = '...';
     this.shippingTime = '\n \n Look photos carefully!\n' +
       '\n' +
@@ -84,9 +84,8 @@ export class AppComponent {
       measurements = measurements + e + out + ' cm/ ' + outINC.toFixed(2) + ' inc.\n'
     }
 
-    this.finalText = header + this.temp + condition + this.meas + measurements + this.shippingTime;
+    this.finalText = header + '\n \nCondition : \n \n' + condition + this.meas + measurements + this.temp + this.shippingTime;
   }
-
   copyMessage(thisGoesToClipboard: string) {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
